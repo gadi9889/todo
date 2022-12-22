@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
-}
+/* general */
+/* button */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.4px solid rgba(0,0,0,0.01);
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: darkgrey;
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
+}
+
+/* button */
+/* inputs */
+
+input {
+  transition: 0.5s;
+}
+
+input:hover ,select:hover {
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.24), 0px 0px 1px 1px rgba(0,0,0,0.19);
+}
+
+input[type=text], select {
+  width: 40%;
+  text-align: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+input[type=color] {
+  padding: 0;
+  width: 150%;
+  height: 150%;
+  margin: -20%;
+}
+
+/* inputs */
+/* general */
+
+/* App Component */
+
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.02);
+}
+
+/* App Component */
+/* CreateRoom color picker */
+
+#cp-wrap {
+  overflow: hidden;
+  width: 4vw;
+  height: 8vh;
+  margin: 0 auto;
+}
+
+/* CreateRoom color picker */
+
+/* dropdown */
+/* ErrorMessage Component */
+
+#error-container {
+  width: clamp(20%,250px,89%);
+  height: min(90%,150px);
+  border: solid rgb(93, 0, 168) 5px;
+  margin: auto;
+  padding: 3%;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* ErrorMessage Component */
+/* CreateProduct Component */
+
+.create-product-container {
+  width: clamp(20%,300px,70%);
+  height: 30%;
+  border: solid rgb(93, 0, 168) 5px;
+  margin: auto;
+  padding: 3%;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.create-product-container h4 {
+  color:purple;
+  margin:0;
+  font-weight:bold;
+}
+
+.create-product-container select {
+  width: clamp(40%,200px);
+  height: 10vh;
+}
+
+/* CreateProduct Component */
+/* Background Component */
+
+#dropdown-background {
+  display: flex;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Background Component */
+/* dropdown */
+/* svg */
+
+.svg {
+  position: absolute;
+  width: 30px;
+  overflow: visible;
+  stroke: red;
+  stroke-width: 2;
+  stroke-linejoin: miter;
+  stroke-linecap: round;
+}
+
+/* svg */
+/* Product Component */
+#product-grid {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  width: 12vw;
+  height: 15vh;
+  border: solid black 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product:hover {
+  width:10vw;
+  background-color: rgba(0,0,0,0.19);
 }
+
+.product-add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: clamp(30%,180px);
+  height: 13vh;
+  font-weight: bolder;
+  border-radius: 100px;
+  font-size: 150%;
+  background-color: white;
+}
+/* Product Component */
